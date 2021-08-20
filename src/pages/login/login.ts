@@ -59,7 +59,7 @@ export class LoginPage {
 
   private showLoading () : Loading {
     let loading : Loading = this.loadingCtrl.create({
-      content : 'Logando...'
+      content : 'Aguarde...'
     })
 
     loading.present();
