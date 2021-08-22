@@ -3,8 +3,9 @@ import { AuthProvider } from './../../providers/auth/auth';
 import { UserProvider } from './../../providers/user/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController, AlertController } from 'ionic-angular';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators}from '@angular/forms';
 import * as firebase from 'firebase/app';
+import { timeout } from 'rxjs/operator/timeout';
 
 @IonicPage()
 @Component({
@@ -44,9 +45,7 @@ export class RegisterPage {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
-  }
+  
 
   onSubmit () : void {
     //this.navCtrl.push('LoginPage');
@@ -64,8 +63,7 @@ export class RegisterPage {
       let uuid : string = authUser.uid
 
       this.userProvider.create(formUser, uuid).then(() => {
-        console.log("usuario cadastrado com sucesso")
-        loading.dismiss()
+        console.log("usuario cadastrado com sucesso");
         this.navCtrl.setRoot(TabsPage);
       }).catch(( error : any) =>{
         console.log(error);
@@ -83,12 +81,19 @@ export class RegisterPage {
 
   private showLoading () : Loading {
     let loading : Loading = this.loadingCtrl.create({
-      content : 'Aguarde...'
+      content : 'Aguarde...'  
+        
+      
+    
+
     })
 
     loading.present();
 
     return loading;
+      
+   
+
   }
 
 

@@ -20,7 +20,7 @@ export abstract class BaseComponent implements OnInit {
     onLogout(): void {
 
         this.alertCtrl.create({
-            message: 'Deseja sair?',
+            message: 'Realmente deseja sair?',
             buttons: [
                 {
                   text: 'Sim',

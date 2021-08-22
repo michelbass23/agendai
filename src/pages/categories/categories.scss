@@ -15,5 +15,39 @@ page-categories {
   ion-icon[aria-label="build"] {
     color:rgb(54, 115, 141)  !important;
   }
-}
+
+  .box{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  
+    
+  }
+
+  .btn{
+    width: 250px;
+    height: 90px;
+      background-color:transparent;
+      border-radius: 20px;
+      margin-bottom: 20px;
+  
+      
+          
+
+      p{
+        font-size: 15px;
+        margin-bottom: 2px;
+        
+      }
+
+      ion-icon{
+        font-size: 50px;
+      }
+     
+
+      }
+  }
+  
+
 

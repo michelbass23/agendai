@@ -6,12 +6,64 @@
 
     <ion-list no-lines>
       <ion-item *ngFor="let category of categories | async" margin-vertical>
-          <button ion-button clear  (click)="showIndependent(category);"  icon-left>
+          <button ion-button clear  (click)="showIndependent(category);"
+            icon-left>
             <ion-icon [name]="category.icon"></ion-icon>
             <div>{{ category.name }}</div>
           </button>
-      </ion-item>
+       </ion-item>
     </ion-list>
+      
+    <div class="row box">
+      <div class="col-12 col-sm-6 col-md-8">
+        <button class="btn btn-dark">
+          <ion-icon name="hammer-outline"></ion-icon>
+          <p>Construção civil</p>
+        </button>
+      </div>
 
+    
+      <div class="col-12 col-md-4">
+        <button class="btn btn-dark">
+          <ion-icon name="pulse-outline"></ion-icon>
+          <p>Saúde</p>
+        </button>
+
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-8">
+        <button class="btn btn-dark">
+          <ion-icon name="cloud-upload-outline"></ion-icon>
+          <p>Tecnologia</p>
+        </button>
+      </div>
+
+      
+      <div class="col-12 col-sm-6 col-md-8">
+        <button class="btn btn-dark">
+          <ion-icon name="restaurant-outline"></ion-icon>
+          <p>Culinária</p>
+        </button>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-8">
+        <button class="btn btn-dark">
+          <ion-icon name="car-outline"></ion-icon>
+          <p>Motorista</p>
+        </button>
+      </div>
+      
+
+  
+
+    </div>
+          
+          
+
+         
+              
+            
+ 
+        
 </ion-content>
 
